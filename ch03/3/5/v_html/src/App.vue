@@ -9,5 +9,6 @@
 </script>
 
 <template>
-  {{  message }}
+  <!--// {{  message }} //-->
+  <div v-html="message"></div>
 </template>
