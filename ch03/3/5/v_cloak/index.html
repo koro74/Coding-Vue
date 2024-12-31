@@ -1,0 +1,38 @@
+<!--//
+3.3.5 디렉티브 사용하기
+- <script> 태그 영역에서 정의한 data 옵션 속성을 <template> 태그 영역에서
+  사용할 수 있게 하는 방법중에 디렉티브가 있습니다. (86 Page 디렉티브 사용하기 중)
+
+* v-cloak 디렉티브는 뷰 애플리케이션의 렌더링 과정에서 데이터 바인딩이 완료되기 전에 데이터가 화면에서
+노출되는 것을 막기 위해 사용된다고한다. 
+아래 <style>/<h1> 태그 속성 v-cloak 삭제 후 실행 시 {{ message }} 렌더링 후 Hello Vue! 문구 출력되는 것을
+확인할 수 있다.
+
+- 실제 실무에서 vue js 뿐만 아니라 타 언어에서도 데이터 바인딩 시 이와 같은 현상이 발생하는 경우가
+종종있다. (개발자 테스트에서 해당 문제를 발견하지 못하고 QA에서 발견된다면... 아찔한 경험을... ㅠㅠ)
+//-->
+
+<style>
+    [v-cloak] {
+        display: none;
+    }
+</style>
+
+<div id="app">
+    <h1 v-cloak>{{ message }}</h1>
+</div>
+
+<script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+
+<script>
+    const { createApp } = Vue;
+    window.setTimeout(function()  {
+        createApp({
+            data: function() {
+                return {
+                    message: "Hello Vue!",
+                };
+            },
+        }).mount("#app");
+    }, 2000);
+</script>
