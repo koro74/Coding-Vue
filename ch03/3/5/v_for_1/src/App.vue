@@ -31,8 +31,8 @@ ex)
 
   <h1 v-bind:class="titleClass2"> fruits 데이터의 반복 결과 - index 제거</h1>
   <ul>
-    <li v-for="fruit, index in fruits" :key="index"> <!--// v-for="값 in 배열" key="고유값" 결과값은 동일 //-->
-      인덱스 : {{ index }} => 값 : {{ fruit }}
+    <li v-for="fruit in fruits" :key="fruit"> <!--// v-for="값 in 배열" key="고유값" //-->
+      값 : {{ fruit }}
     </li>
   </ul>  
 </template>
