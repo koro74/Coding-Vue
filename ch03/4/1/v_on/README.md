@@ -6,6 +6,9 @@
 하지만 뷰에서는 자바스크립트보다 쉽게 이벤트를 다룰 수 있습니다.
 * Vue.js 프런트엔드 개발 입문 내용 중
 
+3.4.1 뷰에서는 v-on 디렉티브로 이벤트를 쉽게 연결할 수 있습니다.
+ex) v-on: 이벤트_타입="이벤트_헨들러"
+
 This template should help get you started developing with Vue 3 in Vite.
 
 ## Recommended IDE Setup
