@@ -5,8 +5,9 @@
 
 * v-for : v-for 뷰에서 반복적으로 렌더링하는 HTML 요소를 생성하는데 사용하는 구문이다. (97 Page)
 ex) 
-1) v-for="값 in 배열" key="고유값"
-2) v-for="(값, 인덱스) in 배열" :key="고유값"
+1) v-for="값 in 배열" (v-bind:key="고유값" or :key="고유값")
+2) v-for="(값, 인덱스) in 배열" v-bind:key="고유값"
+key 속성은 필요에 따라 속성값을 변경할 수 있다(실무에서...)... ex) key=> name/fruitName 등동
 //-->
 
 <script>
@@ -24,7 +25,7 @@ ex)
 <template>
   <h1 v-bind:class="titleClass1"> fruits 데이터의 반복 결과 - index 포함</h1>
   <ul>
-    <li v-for="(fruit, index) in fruits" :key="index"> <!--// v-for="(값, 인덱스) in 배열" key="고유값" 결과값은 동일 //-->
+    <li v-for="(fruit, index) in fruits" v-bind:key="index"> <!--// v-for="(값, 인덱스) in 배열" key="고유값" 결과값은 동일 //-->
       인덱스 : {{ index }} => 값 : {{ fruit }}
     </li>
   </ul>
