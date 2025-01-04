@@ -1,4 +1,5 @@
-# .
+# . 3.5.3 폼 요소와 이벤트
+* v-on input 이벤트(폴더명 change 잘못생성)
 
 This template should help get you started developing with Vue 3 in Vite.
 
