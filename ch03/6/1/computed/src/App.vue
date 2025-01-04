@@ -19,7 +19,9 @@ computed 옵션 속성에 의해 캐싱됩니다.
 
     computed:{
       fullName: function() {
-        console.log("computed fullName");
+        console.log("computed fullName"); 
+        // console.log는 한 번만 출력됩니다. fullName 데이터 속성을 출력하기 위해 한 번만 접근하고,
+        // 이후에는 캐싱된 값을 가져왔기 때문입니다.
         return `${this.lastName} ${this.firstName}`;
       },
     },
