@@ -11,7 +11,7 @@ preventDefault() 메서드를 함께 사용 합니다.
   export default {
     methods: {
       onSubmitHandler: function(e) {
-        e.preventDefault();
+        e.preventDefault(); // submit 이벤트 발생 시 preventDefault 사용으로 네이버 페이지로 이동 하지 않는다.
         // 실제 실무에서 별도의 폼 전송 처리 로직 작성
         console.log("onSubmit Handler!");
       },
@@ -20,6 +20,7 @@ preventDefault() 메서드를 함께 사용 합니다.
 </script>
 
 <template>
+  <!--// method post 정의 submit 시 네이버 이동 //-->
   <form v-on:submit="onSubmitHandler" method="post" action="https://www.naver.com">
     <button type="submit">전송</button>
   </form>
