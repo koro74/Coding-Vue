@@ -5,7 +5,7 @@
   }
   
   body {
-    background-color: #ffffff;
+    background-color: #000000;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -14,8 +14,8 @@
   
   .calculator {
     width: 287px;
-    border: 1px solid #333;
-    background-color: #ccc;
+    border: 1px solid #FFF;
+    background-color: #000;
     padding: 5px;
   }
   
@@ -37,21 +37,35 @@
   }
   
   .calculator form .clear {
-    background-color: #ed4848;
+    background-color: #818080;
+    color: #FFF;
+    font-weight: bold;
   }
   
   .calculator form .operator {
-    background-color: orange;
+    background-color: #fc8f00;
+    color: #FFF;
+    font-weight: bold;
   }
   
   .calculator form .dot {
-    background-color: green;
+    background-color: #3a3a3a;
+    color: #FFF;
+    font-weight: bold;
   }
   
+  .calculator form .number {
+    background-color: #3a3a3a;
+    color: #FFF;
+    font-weight: bold;
+  }
   .calculator form input[type='text'] {
     grid-column: span 4;
     text-align: right;
     padding: 0 10px;
+    background-color: #000;
+    color: #FFF;
+    font-weight: bold;
   }
   
   .calculator form .clear {
@@ -60,4 +74,4 @@
   
   .calculator form .result {
     grid-column: span 2;
-  }  
+  } 
