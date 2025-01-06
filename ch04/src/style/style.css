@@ -18,6 +18,14 @@
     background-color: #000;
     padding: 5px;
   }
+
+  .calculator .console {
+    height: 30px;
+    text-align: right;
+    color: #FFF;
+    font-size: 16px;
+    font-weight: bold;
+  }
   
   .calculator form {
     display: grid;
