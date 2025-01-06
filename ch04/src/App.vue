@@ -6,6 +6,7 @@
 - 문자열이 포함된 경우 true, 그렇지 않으면 false를 반환합니다.
 
 4.5.4 예외 처리하기 (173 page : 2025.01.06)
+4.5.5 초기화하기 (174 page : 2025.01.06)
 //-->
 
 <script>
@@ -23,6 +24,16 @@
     methods: {
       operation: function(e) {
         const n = e.currentTarget.value; // 4.5.1 클릭한 버튼 값 가져오기
+        console.log("Click key Pad => " + n);
+        //4.5.6 초기화하기
+        if (n === "C") {
+          this.ouput = null;
+          this.prev = null;
+          this.cur = null;
+          this.operator = null;
+          return;
+        }
+
         // 4.5.3 연산 로직
         const operArray = ["+", "-", "*", "/", "="];
         if (operArray.includes(n)) {
