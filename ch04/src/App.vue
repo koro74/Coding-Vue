@@ -25,7 +25,7 @@
       operation: function(e) {
         const n = e.currentTarget.value; // 4.5.1 클릭한 버튼 값 가져오기
         console.log("Click key Pad => " + n);
-        //4.5.6 초기화하기
+        //4.5.5 초기화하기
         if (n === "C") {
           this.ouput = null;
           this.prev = null;
