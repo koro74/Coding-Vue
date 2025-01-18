@@ -9,5 +9,5 @@
 </script>
 
 <template>
-  <UserProfile name="김철수" age="30" />
+  <UserProfile v-bind:name="`김철수`" v-bind:age="30" />
 </template>
