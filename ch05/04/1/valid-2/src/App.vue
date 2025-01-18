@@ -8,7 +8,7 @@
 
     data: function() {
       return {
-        userName: "김",
+        userName: "김철수",
       };
     },
   }
